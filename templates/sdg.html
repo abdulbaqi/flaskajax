@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block content %}
+<h1>SDG Data</h1>
+<form class="form-inline">
+	{{ form.csrf_token }}
+
+ 	<div class="form-group">
+	    <label class="sr-only" for="sdginput">SDG</label>
+	    {{form.sdg(class="form-control")}} &nbsp;{{form.country(class="form-control")}}
+	  </div>
+	  &nbsp;
+	  <button type="submit" class="btn btn-info">Submit</button>
+</form>
+<div id="result"></div>
+
+
+{% endblock %}
